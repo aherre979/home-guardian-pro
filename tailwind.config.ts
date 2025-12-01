@@ -52,8 +52,8 @@ export default {
         urgent: "hsl(var(--urgent))",
       },
       fontFamily: {
-        serif: ['Merriweather', 'Georgia', 'serif'],
-        sans: ['Open Sans', 'system-ui', 'sans-serif'],
+        serif: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

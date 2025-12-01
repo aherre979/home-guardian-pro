@@ -9,43 +9,43 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    --foreground: 209 93% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 209 93% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 209 93% 27%;
 
-    --primary: 4 90% 58%;
+    --primary: 209 93% 27%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 200 96% 94%;
+    --secondary-foreground: 209 93% 27%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 200 96% 94%;
+    --muted-foreground: 209 93% 40%;
 
-    --accent: 45 100% 51%;
-    --accent-foreground: 0 0% 15%;
+    --accent: 180 99% 63%;
+    --accent-foreground: 209 93% 27%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 4 90% 58%;
+    --border: 200 96% 94%;
+    --input: 200 96% 94%;
+    --ring: 180 99% 63%;
 
-    --highlight: 48 100% 67%;
-    --trust: 142 71% 45%;
-    --urgent: 4 90% 58%;
+    --highlight: 180 99% 63%;
+    --trust: 180 99% 63%;
+    --urgent: 209 93% 27%;
 
-    --radius: 0.375rem;
+    --radius: 0.5rem;
   }
 }
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@400;600;700&display=swap');
   
   * {
     @apply border-border;
@@ -53,13 +53,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 18px;
     line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', Georgia, serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 700;
     line-height: 1.2;
   }
