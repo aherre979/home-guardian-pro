@@ -2,6 +2,8 @@ import { CTAButton } from "@/components/CTAButton";
 import { Highlight } from "@/components/Highlight";
 import { GuaranteeBox } from "@/components/GuaranteeBox";
 import { CheckCircle2, Shield, Users, Zap, Award, Clock } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import AutoScrollBanner from "@/components/AutoScrollBanner";
 
 const Index = () => {
   return (
@@ -669,50 +671,62 @@ const Index = () => {
             Pero no tienes que creer solo lo que decimos nosotros. Aquí tienes la opinión de autoridades judiciales, policiales y del mundo de la seguridad privada, que sí pueden evaluar y validar esta tecnología.
           </p>
 
-          <div className="space-y-6 mb-12">
-            <div className="trust-badge p-6 rounded-lg">
-              <p className="font-bold text-lg mb-2">Vicente Tovar – Magistrado en excedencia, 20 años de carrera judicial</p>
-              <p className="text-lg italic mb-2">
-                "El Certificado de Morada aporta una solución jurídica crucial, ofreciendo una protección sin precedentes a los moradores."
-              </p>
-              <p className="text-lg italic">
-                "La utilización de sellos de tiempo cualificado proporciona la validez y seguridad necesarias para permitir la actuación policial inmediata."
-              </p>
-            </div>
+          <div className="mb-12 px-4 md:px-12">
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="trust-badge p-8 rounded-lg mx-2">
+                    <p className="font-bold text-xl mb-4">Vicente Tovar</p>
+                    <p className="text-sm mb-4 text-muted-foreground">Magistrado en excedencia, 20 años de carrera judicial</p>
+                    <p className="text-lg italic mb-3">
+                      "El Certificado de Morada aporta una solución jurídica crucial, ofreciendo una protección sin precedentes a los moradores."
+                    </p>
+                    <p className="text-lg italic">
+                      "La utilización de sellos de tiempo cualificado proporciona la validez y seguridad necesarias para permitir la actuación policial inmediata."
+                    </p>
+                  </div>
+                </CarouselItem>
 
-            <div className="trust-badge p-6 rounded-lg">
-              <p className="font-bold text-lg mb-2">Javier Mirallas</p>
-              <p className="text-sm mb-2">Presidente ICS Intelligence • Ex Presidente de Prosegur Cataluña • Ex Consejero de Securitas España</p>
-              <p className="text-lg italic mb-2">
-                "La tecnología de Moradai presenta características excepcionales. Ofrece una respuesta eficaz y certificada contra la ocupación ilegal."
-              </p>
-              <p className="text-lg italic">
-                "Es una contribución práctica que beneficia de forma significativa a los propietarios."
-              </p>
-            </div>
+                <CarouselItem>
+                  <div className="trust-badge p-8 rounded-lg mx-2">
+                    <p className="font-bold text-xl mb-4">Javier Mirallas</p>
+                    <p className="text-sm mb-4 text-muted-foreground">Presidente ICS Intelligence • Ex Presidente de Prosegur Cataluña • Ex Consejero de Securitas España</p>
+                    <p className="text-lg italic mb-3">
+                      "La tecnología de Moradai presenta características excepcionales. Ofrece una respuesta eficaz y certificada contra la ocupación ilegal."
+                    </p>
+                    <p className="text-lg italic">
+                      "Es una contribución práctica que beneficia de forma significativa a los propietarios."
+                    </p>
+                  </div>
+                </CarouselItem>
 
-            <div className="trust-badge p-6 rounded-lg">
-              <p className="font-bold text-lg mb-2">Juan Carlos Fernández – Abogado, CEO de Tecnogados</p>
-              <p className="text-lg italic mb-2">
-                "En muchos casos, el ciudadano no tiene capacidad de prueba. Moradai lo cambia por completo."
-              </p>
-              <p className="text-lg italic">
-                "El Certificado de Morada acredita el uso de la vivienda —primera o segunda residencia— y permite la actuación policial y la recuperación inmediata de la posesión."
-              </p>
-            </div>
+                <CarouselItem>
+                  <div className="trust-badge p-8 rounded-lg mx-2">
+                    <p className="font-bold text-xl mb-4">Juan Carlos Fernández</p>
+                    <p className="text-sm mb-4 text-muted-foreground">Abogado, CEO de Tecnogados</p>
+                    <p className="text-lg italic mb-3">
+                      "En muchos casos, el ciudadano no tiene capacidad de prueba. Moradai lo cambia por completo."
+                    </p>
+                    <p className="text-lg italic">
+                      "El Certificado de Morada acredita el uso de la vivienda —primera o segunda residencia— y permite la actuación policial y la recuperación inmediata de la posesión."
+                    </p>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
 
           <div className="bg-secondary p-6 md:p-8 rounded-lg mb-8">
             <h3 className="text-2xl font-bold mb-6 text-center">Respaldado por las entidades más prestigiosas</h3>
-            <p className="text-lg mb-6">
+            <p className="text-lg mb-6 text-center">
               Moradai está respaldado por algunas de las entidades más prestigiosas de España y Europa en materia de innovación, derecho y tecnología:
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-lg font-semibold">
-              <span className="bg-background px-4 py-2 rounded">CASER Seguros</span>
-              <span className="bg-background px-4 py-2 rounded">Lanzadera</span>
-              <span className="bg-background px-4 py-2 rounded">Wayra Telefónica</span>
-              <span className="bg-background px-4 py-2 rounded">Cuatrecasas Acelera</span>
-            </div>
+            <AutoScrollBanner 
+              items={["CASER Seguros", "Lanzadera", "Wayra Telefónica", "Cuatrecasas Acelera"]}
+              speed={25}
+            />
             <p className="text-lg mt-6 text-center italic">
               Este tipo de entidades no respaldan productos sin un nivel extremo de rigor tecnológico y jurídico.
             </p>
@@ -720,14 +734,10 @@ const Index = () => {
 
           <div className="bg-secondary p-6 md:p-8 rounded-lg">
             <h3 className="text-2xl font-bold mb-6 text-center">Apariciones en medios</h3>
-            <div className="flex flex-wrap justify-center gap-6 text-lg font-semibold">
-              <span className="bg-background px-4 py-2 rounded">ABC</span>
-              <span className="bg-background px-4 py-2 rounded">El Español</span>
-              <span className="bg-background px-4 py-2 rounded">COPE</span>
-              <span className="bg-background px-4 py-2 rounded">La Razón</span>
-              <span className="bg-background px-4 py-2 rounded">Emprendedores</span>
-              <span className="bg-background px-4 py-2 rounded">Europa Press</span>
-            </div>
+            <AutoScrollBanner 
+              items={["ABC", "El Español", "COPE", "La Razón", "Emprendedores", "Europa Press"]}
+              speed={20}
+            />
           </div>
         </div>
 
