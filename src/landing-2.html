@@ -259,22 +259,35 @@
 
   .tag-icon {
     color: hsl(var(--trust));
-    font-size: 1.3rem;
-    line-height: 1;
     margin-top: 0.3rem;
     flex-shrink: 0;
     min-width: 1.5rem;
     text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .tag-cross {
     color: hsl(var(--destructive));
     font-weight: 700 !important;
-    font-size: 1.15rem;
     flex-shrink: 0;
     min-width: 1.5rem;
     text-align: center;
     margin-top: 0.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .tag-icon svg,
+  .tag-cross svg {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   .cta-primary {
@@ -1163,8 +1176,30 @@
   }
 
   .comparison-icon {
-    font-size: 4rem;
     margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comparison-icon svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .icon-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+  }
+
+  .icon-warning svg {
+    width: 1.4rem;
+    height: 1.4rem;
   }
 
   .comparison-card h4 {
@@ -1721,15 +1756,15 @@
       <h3>Déjame decirte quién debe seguir leyendo:</h3>
       <ul class="tag-list">
         <li>
-          <span class="tag-icon">✔</span>
+          <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
           <span>Si tienes una primera o segunda residencia y te preocupa la okupación</span>
         </li>
         <li>
-          <span class="tag-icon">✔</span>
+          <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
           <span>Si quieres ahorrar dinero, tiempo y disgustos evitando abogados, desplazamientos y reparaciones…</span>
         </li>
         <li>
-          <span class="tag-icon">✔</span>
+          <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
           <span>Si te importa tu salud, tu seguridad y tu paz mental…</span>
         </li>
       </ul>
@@ -1757,27 +1792,27 @@
         style="align-items: center !important; text-align: center !important; margin: 0 auto !important; max-width: 600px;">
         <li
           style="justify-content: center !important; margin-left: auto !important; margin-right: auto !important; display: flex !important;">
-          <span class="tag-cross">✗</span>
+          <span class="tag-cross" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m13.4 12 4.3-4.3-1.4-1.4L12 10.6 7.7 6.3 6.3 7.7 10.6 12l-4.3 4.3 1.4 1.4L12 13.4l4.3 4.3 1.4-1.4z"/></svg></span>
           <span>Escrituras → No valen.</span>
         </li>
         <li
           style="justify-content: center !important; margin-left: auto !important; margin-right: auto !important; display: flex !important;">
-          <span class="tag-cross">✗</span>
+          <span class="tag-cross" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m13.4 12 4.3-4.3-1.4-1.4L12 10.6 7.7 6.3 6.3 7.7 10.6 12l-4.3 4.3 1.4 1.4L12 13.4l4.3 4.3 1.4-1.4z"/></svg></span>
           <span>Facturas → No valen.</span>
         </li>
         <li
           style="justify-content: center !important; margin-left: auto !important; margin-right: auto !important; display: flex !important;">
-          <span class="tag-cross">✗</span>
+          <span class="tag-cross" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m13.4 12 4.3-4.3-1.4-1.4L12 10.6 7.7 6.3 6.3 7.7 10.6 12l-4.3 4.3 1.4 1.4L12 13.4l4.3 4.3 1.4-1.4z"/></svg></span>
           <span>Empadronamiento → No vale.</span>
         </li>
         <li
           style="justify-content: center !important; margin-left: auto !important; margin-right: auto !important; display: flex !important;">
-          <span class="tag-cross">✗</span>
+          <span class="tag-cross" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m13.4 12 4.3-4.3-1.4-1.4L12 10.6 7.7 6.3 6.3 7.7 10.6 12l-4.3 4.3 1.4 1.4L12 13.4l4.3 4.3 1.4-1.4z"/></svg></span>
           <span>DNI con tu dirección → No vale.</span>
         </li>
         <li
           style="justify-content: center !important; margin-left: auto !important; margin-right: auto !important; display: flex !important;">
-          <span class="tag-cross">✗</span>
+          <span class="tag-cross" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m13.4 12 4.3-4.3-1.4-1.4L12 10.6 7.7 6.3 6.3 7.7 10.6 12l-4.3 4.3 1.4 1.4L12 13.4l4.3 4.3 1.4-1.4z"/></svg></span>
           <span>Contratos → No vale.</span>
         </li>
       </ul>
@@ -1972,11 +2007,11 @@
 
       <h3 style="margin-top: 2rem; text-align: center;">Es tan sencillo que lo instalas tú mismo en minutos</h3>
       <ul class="list-clean" style="text-align: left; padding-left: 0; list-style: none;">
-        <li>✓ Sin técnicos.</li>
-        <li>✓ Sin citas.</li>
-        <li>✓ Sin perder tu tiempo esperando a que venga nadie.</li>
-        <li>✓ Sin abrir la puerta a desconocidos.</li>
-        <li>✓ Sin pagar instalaciones.</li>
+        <li><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sin técnicos.</li>
+        <li><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sin citas.</li>
+        <li><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sin perder tu tiempo esperando a que venga nadie.</li>
+        <li><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sin abrir la puerta a desconocidos.</li>
+        <li><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sin pagar instalaciones.</li>
       </ul>
       <p><strong>Solo sacas el dispositivo, lo pegas y listo.</strong></p>
       <p>Lo que antes te llevaba horas y dolores de cabeza, ahora te lleva 2 minutos.</p>
@@ -1993,19 +2028,19 @@
         <p>Con un clic tendrás:</p>
         <ul class="tag-list">
           <li>
-            <span class="tag-icon">✔</span>
+            <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
             <span>Tu registro diario</span>
           </li>
           <li>
-            <span class="tag-icon">✔</span>
+            <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
             <span>Tu prueba firmada con sello de tiempo</span>
           </li>
           <li>
-            <span class="tag-icon">✔</span>
+            <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
             <span>Todo tu histórico</span>
           </li>
           <li>
-            <span class="tag-icon">✔</span>
+            <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
             <span>Descargas ilimitadas</span>
           </li>
         </ul>
@@ -2066,22 +2101,38 @@
 
       <div class="comparison-grid">
         <div class="comparison-card negative">
-          <div class="comparison-icon">🚨</div>
-          <h4>✗ Una Alarma</h4>
+          <div class="comparison-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 10c-8.8 0-16 7.2-16 16 0 5 2.3 9.5 6 12.5V44a10 10 0 0 0 4 8v2h12v-2a10 10 0 0 0 4-8v-5.5c3.7-3 6-7.5 6-12.5 0-8.8-7.2-16-16-16Z" fill="currentColor"/>
+              <path d="M32 6v6M18 12l4 4M14 26h6m24-14-4 4m6 10h-6M20 48h24" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4><span class="icon-inline icon-warning" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m15 9-6 6m0-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Una Alarma</h4>
           <p><strong>NO demuestra</strong> que vives allí.</p>
           <p class="muted" style="font-size: 0.9rem; margin-top: 1rem;">Son reactivas y fácilmente manipulables.</p>
         </div>
 
         <div class="comparison-card negative">
-          <div class="comparison-icon">📹</div>
-          <h4>✗ Una Cámara</h4>
+          <div class="comparison-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="14" width="36" height="28" rx="6" stroke="currentColor" stroke-width="4"/>
+              <path d="M44 24 56 18v20L44 32" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+              <circle cx="22" cy="28" r="6" stroke="currentColor" stroke-width="4"/>
+            </svg>
+          </div>
+          <h4><span class="icon-inline icon-warning" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m15 9-6 6m0-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Una Cámara</h4>
           <p><strong>NO demuestra</strong> que vives allí.</p>
           <p class="muted" style="font-size: 0.9rem; margin-top: 1rem;">Horas de vídeo, pruebas impugnables.</p>
         </div>
 
         <div class="comparison-card positive">
-          <div class="comparison-icon">✅</div>
-          <h4>✓ Tu Testigo</h4>
+          <div class="comparison-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="4"/>
+              <path d="m22 33 6 6 14-14" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tu Testigo</h4>
           <p><strong>SÍ demuestra</strong> que vives allí.</p>
           <p class="muted" style="font-size: 0.9rem; margin-top: 1rem;">Prueba legal definitiva e irrefutable.</p>
         </div>
@@ -2133,9 +2184,9 @@
       </p>
       <div style="text-align: center;">
         <ul class="list-clean" style="display: inline-block; text-align: left; padding-left: 0; list-style: none;">
-          <li>✓ Sin pensar en cuando los desalojarán</li>
-          <li>✓ Sin esfuerzo en negociar con los okupas</li>
-          <li>✓ Sin preocuparte por tu salud</li>
+          <li><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sin pensar en cuando los desalojarán</li>
+          <li><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sin esfuerzo en negociar con los okupas</li>
+          <li><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sin preocuparte por tu salud</li>
         </ul>
       </div>
 
@@ -2166,50 +2217,50 @@
         <h2 class="text-center mt-0 mb-2">Y con lo que viene equipado te va a alucinar…</h2>
         <div class="feature-grid">
           <div class="card">
-            <h3>🔍 Sensor inteligente de intrusión</h3>
+            <h3><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"/><path d="m15 15 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Sensor inteligente de intrusión</h3>
             <p>
               Detecta cualquier entrada o manipulación en segundos, así nadie podrá cambiar la cerradura sin que lo
               sebas al instante.
             </p>
           </div>
           <div class="card">
-            <h3>🔐 Sellos notariales digitales</h3>
+            <h3><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 11V8a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="2"/></svg></span>Sellos notariales digitales</h3>
             <p>
               Invierten la carga de la prueba y establecen tu morada de forma legalmente válida, permitiendo que las
               autoridades actúen sin dudar.
             </p>
           </div>
           <div class="card">
-            <h3>⚠️ Cartel disuasorio profesional</h3>
+            <h3><span class="icon-inline icon-warning" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4 3 20h18L12 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 9v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1" fill="currentColor"/></svg></span>Cartel disuasorio profesional</h3>
             <p>
               Indica claramente que la vivienda tiene un morador acreditado, por lo que los okupas preferirán evitar
               tu casa.
             </p>
           </div>
           <div class="card">
-            <h3>👤 Registro facial ultrarrápido</h3>
+            <h3><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M6 20a6 6 0 1 1 12 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Registro facial ultrarrápido</h3>
             <p>
               Verifica tu identidad sin fotos ni vídeo en medio segundo, impidiendo que un okupa pueda hacerse pasar
               por ti.
             </p>
           </div>
           <div class="card">
-            <h3>☁️ Certificados en la nube</h3>
+            <h3><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 18h10a4 4 0 0 0 0-8h-.3A5 5 0 0 0 7 8.5C4.8 8.8 3 10.6 3 12.8 3 15 4.8 17 7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Certificados en la nube</h3>
             <p>
               Todo tu historial queda guardado y accesible desde cualquier parte, garantizando que tu prueba no
               desaparece aunque destruyan el dispositivo.
             </p>
           </div>
           <div class="card">
-            <h3>🔋 Batería recargable de larga duración</h3>
+            <h3><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/><path d="M19 10h2v4h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Batería recargable de larga duración</h3>
             <p>Hasta un año de autonomía real, para que no tengas que estar pendiente de comprar pilas.</p>
           </div>
           <div class="card">
-            <h3>⚡ Instalación instantánea sin técnicos</h3>
+            <h3><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2 6 13h6l-1 9 7-11h-6l1-9Z" fill="currentColor"/></svg></span>Instalación instantánea sin técnicos</h3>
             <p>Lo colocas tú mismo en minutos, ahorrándote citas, esperas y un día entero perdido.</p>
           </div>
           <div class="card">
-            <h3>📱 Registro automático diario</h3>
+            <h3><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="3" width="10" height="18" rx="2" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg></span>Registro automático diario</h3>
             <p>
               El Testigo trabaja solo, sin que tengas que recordar nada, dejando protegida tu vivienda incluso cuando
               tú no piensas en ello.
@@ -2810,7 +2861,7 @@
         </p>
 
         <div class="pill-warning mb-3">
-          <p class="mb-1" style="font-size: 1.1rem; font-weight: 700">⚠️ ATENCIÓN</p>
+          <p class="mb-1" style="font-size: 1.1rem; font-weight: 700"><span class="icon-inline icon-warning" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4 3 20h18L12 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 9v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1" fill="currentColor"/></svg></span>ATENCIÓN</p>
           <p class="mb-1">
             Ahora mismo se han agotado las unidades y el periodo de entrega lo tenemos en 3-4 semanas.
           </p>
@@ -2821,12 +2872,12 @@
         <div class="card-soft mb-3" style="background-color: #fff;">
           <ul class="tag-list">
             <li>
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span><strong>El Testigo (hardware completo)</strong> – Sistema profesional de registro biométrico y
                 alerta inmediata.</span>
             </li>
             <li>
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span><strong>Descargas ilimitadas del Certificado de Morada</strong> – Todos los registros diarios,
                 disponibles al instante y sin límites.</span>
             </li>
@@ -2905,7 +2956,7 @@
 
             <div class="bonus-highlight" style="background-color: #fff; color: hsl(var(--primary));">
               <div class="flex-between mb-1">
-                <p><strong style="font-size: 1.2em;">📡 Alerta Permanente – SIM Pro</strong></p>
+                <p><strong style="font-size: 1.2em;"><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.93 4.93a10 10 0 0 1 14.14 0M7.76 7.76a6 6 0 0 1 8.48 0M10.6 10.6a2 2 0 0 1 2.82 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Alerta Permanente – SIM Pro</strong></p>
                 <p><strong style="font-size: 1.2em; color: hsl(var(--destructive));">Valor: 59€</strong></p>
               </div>
               <p style="font-size: 1.05em;">Tarjeta SIM integrada gratis. Para que recibas alertas incluso sin WiFi o en
@@ -2918,7 +2969,7 @@
         <h3 class="mb-2">GARANTÍAS QUE TE QUITAN TODO EL RIESGO</h3>
         <div class="section">
           <div class="guarantee-box mb-2">
-            <h4>✓ Garantía "Desalojo o Devolución total"</h4>
+            <h4><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Garantía "Desalojo o Devolución total"</h4>
             <p>
               Como sabemos que estamos seguros de que vamos a desalojar, si, en caso de ocupación, NO lo logramos te
               devolvemos todo lo que hayas pagado hasta la fecha.
@@ -2926,7 +2977,7 @@
           </div>
 
           <div class="guarantee-box mb-2">
-            <h4>✓ Garantía "2 años sin ocupación"</h4>
+            <h4><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Garantía "2 años sin ocupación"</h4>
             <p>
               Si durante los primeros 24 meses no te okupan, te descontamos el 90% de las cuotas siguientes. Sí, has
               leído bien: 90%.
@@ -2934,7 +2985,7 @@
           </div>
 
           <div class="guarantee-box">
-            <h4>✓ Garantía Testigo Nuevo, Sin Preguntas</h4>
+            <h4><span class="icon-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Garantía Testigo Nuevo, Sin Preguntas</h4>
             <p>
               Si El Testigo se estropea el primer año, te lo enviamos nuevo sin coste.
             </p>
@@ -2942,7 +2993,7 @@
         </div>
 
         <div class="pill-warning mb-3" style="background-color: hsl(var(--destructive));">
-          <p class="mb-1" style="font-weight: 700">⚠️ IMPORTANTE</p>
+          <p class="mb-1" style="font-weight: 700"><span class="icon-inline icon-warning" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4 3 20h18L12 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 9v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1" fill="currentColor"/></svg></span>IMPORTANTE</p>
           <p class="mb-1">
             Este lote será probablemente el último de la versión actual.
           </p>
@@ -2958,37 +3009,37 @@
           <ul class="tag-list" style="padding-left: 0;">
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>El Testigo (detección incluida)</span>
             </li>
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>Certificados ilimitados</span>
             </li>
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>Gestión completa de denuncia</span>
             </li>
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>Costas judiciales incluidas</span>
             </li>
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>Cartel disuasorio</span>
             </li>
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>Hasta 5 convivientes</span>
             </li>
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>Instalación guiada</span>
             </li>
             <li
@@ -3000,12 +3051,12 @@
             </li>
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>SIM integrada gratis</span>
             </li>
             <li
               style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1rem; text-align: center;">
-              <span class="tag-icon">✔</span>
+              <span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 16.5 4.5 11.5l1.4-1.4 3.6 3.6 8.6-8.6 1.4 1.4z"/></svg></span>
               <span>3 Garantías totales</span>
             </li>
           </ul>
